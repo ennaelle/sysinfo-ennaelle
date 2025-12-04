@@ -1,5 +1,7 @@
 name: collect system information
-on: push
+on: 
+# exécution manuelle
+    workflow_dispatch:
 
 jobs:
     network-and-system:
@@ -8,7 +10,7 @@ jobs:
             - name: general information
               run: hostnamectl
             - name: IP address
-              run: ip a -4
+              run: ip -4 a
             - name: identity
               run: who am i
 
