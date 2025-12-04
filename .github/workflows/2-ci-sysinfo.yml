@@ -1,0 +1,11 @@
+name: sysinfo CI
+on: push
+
+jobs:
+    C-ci-sysinfo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: sysinfo checkout
+              uses: actions/checkout@v6
+            - name: sysinfo compilation
+              run: make build
