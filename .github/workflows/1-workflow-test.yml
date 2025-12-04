@@ -1,0 +1,15 @@
+name: collect system information
+on: push
+
+jobs:
+    network-and-system:
+        runs-on: ubuntu-latest
+        steps:
+            - name: general information
+              run: hostnamectl
+            - name: IP address
+              run: ip a -4
+            - name: identity
+              run: who am i
+
+
