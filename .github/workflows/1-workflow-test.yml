@@ -6,12 +6,10 @@ on:
 jobs:
     network-and-system:
         runs-on: ubuntu-latest
+        container:
+            image: python:3.10
         steps:
-            - name: general information
-              run: hostnamectl
-            - name: IP address
-              run: ip -4 a
-            - name: identity
-              run: who am i
+            - name: listing directory
+              run: ls -la
 
 
