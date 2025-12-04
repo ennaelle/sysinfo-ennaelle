@@ -9,3 +9,17 @@ jobs:
               uses: actions/checkout@v6
             - name: sysinfo compilation
               run: make build
+    
+    Py-ci-mysystem:
+        runs-on: ubuntu-latest
+        steps:
+            - name: sysinfo checkout
+              uses: actions/checkout@v6
+            - name: Python environment
+              uses: actions/setup-python@v5
+              with:
+                python-version: 3.12
+            - name: lint verification
+              run: |
+                pip install ifaddr psutil pylint
+                pylint --disable=missing-docstring script/mysystem/mysystem.py
