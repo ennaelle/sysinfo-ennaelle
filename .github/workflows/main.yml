@@ -1,8 +1,8 @@
 name: 02 - Variables and Context
 
 on: push
-  env:
-    GLOBAL_VAR: "Je suis globale"
+env:
+  GLOBAL_VAR: "Je suis globale"
 
 jobs:
   variables:
@@ -10,7 +10,7 @@ jobs:
     env:
       JOB_VAR: "Je suis au niveau job"
  
-   steps:
+    steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
