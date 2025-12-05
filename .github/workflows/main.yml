@@ -23,7 +23,7 @@ jobs:
           echo "Step: $STEP_VAR"
 
       - name: Show GitHub context
-          run: |
+        run: |
             echo "Repository: ${{ github.repository }}"
             echo "Branch: ${{ github.ref_name }}"
             echo "SHA: ${{ github.sha }}"
@@ -31,9 +31,10 @@ jobs:
             echo "Event: ${{ github.event_name }}"
 
       - name: Show runner context
-          run: |
+        run: |
             echo "OS: ${{ runner.os }}"
             echo "Architecture: ${{ runner.arch }}"
 
       - name: Show Project secret
-          run: echo "mon token de déploiement : ${{ secrets.TOKEN }}"
+        run: |
+          echo "mon token de déploiement : ${{ secrets.TOKEN }}"
