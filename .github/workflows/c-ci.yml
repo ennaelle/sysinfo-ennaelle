@@ -1,4 +1,4 @@
-name: sysinfo CI
+name: CICD Clanguage
 on: 
   push:
     branches:
