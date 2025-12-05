@@ -17,12 +17,11 @@ jobs:
               uses: actions/checkout@v6
             - name: sysinfo compilation
               run: make build
-
             - name: sysinfo upload artifacts
               uses: actions/upload-artifact@v4
               with:
                 path: sysinfo
-                name: sysinfo-${{ github.sha}}              
+                name: sysinfo-${{ github.sha }}              
     
     C-run-sysinfo:
         runs-on: ubuntu-latest
@@ -36,6 +35,7 @@ jobs:
                 name: sysinfo-${{ github.sha}}
             - name: run sysinfo
               run: |
+                 chmod +x sysinfo
                  ./sysinfo
 
     Py-lint-mysystem:
