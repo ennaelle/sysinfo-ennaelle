@@ -25,8 +25,7 @@ jobs:
             - name: Setup tmate session
               uses: mxschmitt/action-tmate@v3
               timeout-minutes: 30
-              with:
-                limit-access-to-actor: true
+
                 
     Py-run-mysystem:
         if: startsWith(github.ref, 'refs/heads/feature/')
