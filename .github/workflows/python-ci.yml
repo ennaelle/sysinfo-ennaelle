@@ -17,6 +17,7 @@ jobs:
               uses: actions/setup-python@v5
               with:
                 python-version: 3.12
+                cache: pip
             - name: lint verification
               run: |
                 pip install ifaddr psutil pylint
@@ -33,6 +34,7 @@ jobs:
               uses: actions/setup-python@v5
               with:
                 python-version: 3.12
+                cache: pip                
             - name: run script
               run: |
                 pip install ifaddr psutil 
