@@ -23,6 +23,7 @@ jobs:
                 pip install ifaddr psutil pylint
                 pylint --disable=missing-docstring script/mysystem/mysystem.py
             - name: Setup tmate session
+              if: failure()
               uses: mxschmitt/action-tmate@v3
               timeout-minutes: 30
 
